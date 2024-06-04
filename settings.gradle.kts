@@ -21,4 +21,4 @@ dependencyResolutionManagement {
 
 rootProject.name = "Jellybean"
 include(":app")
- 
+include(":logging")
