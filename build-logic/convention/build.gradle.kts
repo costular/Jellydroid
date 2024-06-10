@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     `kotlin-dsl`
 }
@@ -19,8 +21,6 @@ dependencies {
     compileOnly(libs.android.gradlePlugin)
     compileOnly(libs.android.tools.common)
     compileOnly(libs.compose.gradlePlugin)
-    compileOnly(libs.firebase.crashlytics.gradlePlugin)
-    compileOnly(libs.firebase.performance.gradlePlugin)
     compileOnly(libs.kotlin.gradlePlugin)
     compileOnly(libs.ksp.gradlePlugin)
     compileOnly(libs.room.gradlePlugin)
@@ -28,6 +28,13 @@ dependencies {
 
 gradlePlugin {
     plugins {
-
+        register("androidApplicationCompose") {
+            id = "com.costular.jellybean.android.application.compose"
+            implementationClass = "AndroidApplicationComposeConventionPlugin"
+        }
+        register("androidApplication") {
+            id = "com.costular.jellybean.android.application"
+            implementationClass = "AndroidApplicationConventionPlugin"
+        }
     }
 }
