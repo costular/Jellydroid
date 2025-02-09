@@ -15,6 +15,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Jellybean"
+rootProject.name = "Jellydroid"
 include(":app")
 include(":logging")

@@ -4,7 +4,7 @@
 //}
 //
 //android {
-//    namespace = "com.costular.jellybean.logging"
+//    namespace = "com.costular.jellydroid.logging"
 //    compileSdk = 34
 //
 //    defaultConfig {

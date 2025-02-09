@@ -16,10 +16,10 @@
 
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import com.android.build.gradle.LibraryExtension
-import com.costular.jellybean.configureGradleManagedDevices
-import com.costular.jellybean.configureKotlinAndroid
-import com.costular.jellybean.disableUnnecessaryAndroidTests
-import com.costular.jellybean.libs
+import com.costular.jellydroid.configureGradleManagedDevices
+import com.costular.jellydroid.configureKotlinAndroid
+import com.costular.jellydroid.disableUnnecessaryAndroidTests
+import com.costular.jellydroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.configure

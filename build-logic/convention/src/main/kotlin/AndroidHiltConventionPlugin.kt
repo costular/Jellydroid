@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-import com.costular.jellybean.libs
+import com.costular.jellydroid.libs
 import org.gradle.api.Plugin
 import org.gradle.api.Project
 import org.gradle.kotlin.dsl.dependencies

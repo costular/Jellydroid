@@ -14,7 +14,7 @@
  *   limitations under the License.
  */
 
-package com.costular.jellybean
+package com.costular.jellydroid
 
 import com.android.build.api.variant.LibraryAndroidComponentsExtension
 import org.gradle.api.Project
