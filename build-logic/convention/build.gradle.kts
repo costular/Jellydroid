@@ -4,7 +4,7 @@ plugins {
     `kotlin-dsl`
 }
 
-group = "com.costular.jellybean.buildlogic"
+group = "com.costular.jellydroid.buildlogic"
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -29,12 +29,32 @@ dependencies {
 gradlePlugin {
     plugins {
         register("androidApplicationCompose") {
-            id = "com.costular.jellybean.android.application.compose"
+            id = "com.costular.jellydroid.android.application.compose"
             implementationClass = "AndroidApplicationComposeConventionPlugin"
         }
         register("androidApplication") {
-            id = "com.costular.jellybean.android.application"
+            id = "com.costular.jellydroid.android.application"
             implementationClass = "AndroidApplicationConventionPlugin"
+        }
+        register("androidLibrary") {
+            id = "com.costular.jellydroid.android.library"
+            implementationClass = "AndroidLibraryConventionPlugin"
+        }
+        register("androidLibraryCompose") {
+            id = "com.costular.jellydroid.android.library.compose"
+            implementationClass = "AndroidLibraryComposeConventionPlugin"
+        }
+        register("androidFeature") {
+            id = "com.costular.jellydroid.android.feature"
+            implementationClass = "AndroidFeatureConventionPlugin"
+        }
+        register("androidHilt") {
+            id = "com.costular.jellydroid.android.hilt"
+            implementationClass = "AndroidHiltConventionPlugin"
+        }
+        register("jvmLibrary") {
+            id = "com.costular.jellydroid.jvm.library"
+            implementationClass = "JvmLibraryConventionPlugin"
         }
     }
 }

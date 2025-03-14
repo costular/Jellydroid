@@ -1,13 +1,13 @@
 plugins {
-    id("com.costular.jellybean.android.application.compose")
-    id("com.costular.jellybean.android.application")
+    id("com.costular.jellydroid.android.application.compose")
+    id("com.costular.jellydroid.android.application")
 }
 
 android {
-    namespace = "com.costular.jellybean"
+    namespace = "com.costular.jellydroid"
 
     defaultConfig {
-        applicationId = "com.costular.jellybean"
+        applicationId = "com.costular.jellydroid"
         versionCode = 1
         versionName = "0.1.0"
 
@@ -34,4 +34,5 @@ android {
 }
 
 dependencies {
+    implementation(projects.core)
 }
