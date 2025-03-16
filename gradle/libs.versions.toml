@@ -65,11 +65,12 @@ kotest = "5.9.1"
 arrow = "2.0.1"
 jellyfin = "1.6.6"
 mockk = "1.13.17"
+paparazzi = "1.3.5"
 composablePreviewScanner = "0.5.1"
+testParameterInjector = "1.18"
 
 [bundles]
 androidx-compose-ui-test = ["androidx-compose-ui-test", "androidx-compose-ui-testManifest"]
-roborazzi = [ "roborazzi-core", "roborazzi-preview", "roborazzi-compose" ]
 
 [libraries]
 accompanist-permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
@@ -155,8 +156,6 @@ protobuf-protoc = { group = "com.google.protobuf", name = "protoc", version.ref 
 retrofit-core = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofit" }
 retrofit-kotlin-serialization = { group = "com.squareup.retrofit2", name = "converter-kotlinx-serialization", version.ref = "retrofit" }
 robolectric = { group = "org.robolectric", name = "robolectric", version.ref = "robolectric" }
-roborazzi = { group = "io.github.takahirom.roborazzi", name = "roborazzi", version.ref = "roborazzi" }
-roborazzi-accessibility-check = { group = "io.github.takahirom.roborazzi", name = "roborazzi-accessibility-check", version.ref = "roborazzi" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room" }
 room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
@@ -164,11 +163,8 @@ truth = { group = "com.google.truth", name = "truth", version.ref = "truth" }
 turbine = { group = "app.cash.turbine", name = "turbine", version.ref = "turbine" }
 kotest-assertion-core = { group = "io.kotest", name = "kotest-assertions-core", version.ref = "kotest" }
 mockk = { group = "io.mockk", name = "mockk", version.ref = "mockk" }
-roborazzi-core = { group = "io.github.takahirom.roborazzi", name = "roborazzi", version.ref = "roborazzi" }
-roborazzi-preview = { group = "io.github.takahirom.roborazzi", name = "roborazzi-compose-preview-scanner-support", version.ref = "roborazzi" }
-roborazzi-compose = { group = "io.github.takahirom.roborazzi", name = "roborazzi-compose", version.ref = "roborazzi" }
-roborazzi-rule = { group = "io.github.takahirom.roborazzi", name = "roborazzi-junit-rule", version.ref = "roborazzi" }
 composable-preview-scanner = { module = "io.github.sergio-sastre.ComposablePreviewScanner:android", version.ref = "composablePreviewScanner" }
+google-testparameterinjector = { group = "com.google.testparameterinjector", name = "test-parameter-injector", version.ref = "testParameterInjector" }
 
 # Dependencies of the included build-logic
 android-gradlePlugin = { group = "com.android.tools.build", name = "gradle", version.ref = "androidGradlePlugin" }
@@ -202,10 +198,10 @@ kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 module-graph = { id = "com.jraska.module.graph.assertion", version.ref = "moduleGraph" }
-roborazzi = { id = "io.github.takahirom.roborazzi", version.ref = "roborazzi" }
 room = { id = "androidx.room", version.ref = "room" }
 secrets = { id = "com.google.android.libraries.mapsplatform.secrets-gradle-plugin", version.ref = "secrets" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+paparazzi = { id = "app.cash.paparazzi", version.ref = "paparazzi" }
 
 # Convention plugins
 com-costular-jellydroid-jvm-library = { id = "com.costular.jellydroid.jvm.library" }

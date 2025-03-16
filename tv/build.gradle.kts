@@ -1,10 +1,8 @@
-import com.github.takahirom.roborazzi.ExperimentalRoborazziApi
-
 plugins {
     id("com.costular.jellydroid.android.application.compose")
     id("com.costular.jellydroid.android.application")
     id("com.costular.jellydroid.android.hilt")
-    alias(libs.plugins.roborazzi)
+    alias(libs.plugins.paparazzi)
 }
 
 android {
@@ -32,31 +30,6 @@ android {
     buildFeatures {
         buildConfig = true
     }
-
-    testOptions {
-        unitTests {
-            isIncludeAndroidResources = true
-            all {
-                it.systemProperties["robolectric.pixelCopyRenderMode"] = "hardware"
-                // For large preview
-                it.maxHeapSize = "4096m"
-                it.jvmArgs("-noverify")
-            }
-        }
-    }
-}
-
-roborazzi {
-    @OptIn(ExperimentalRoborazziApi::class)
-    generateComposePreviewRobolectricTests {
-        enable = true
-        packages = listOf("com.costular.jellydroid")
-        robolectricConfig = mapOf(
-            "sdk" to "[35]",
-            "qualifiers" to "RobolectricDeviceQualifiers.Television4K",
-        )
-        includePrivatePreviews = true
-    }
 }
 
 dependencies {
@@ -75,7 +48,6 @@ dependencies {
     debugImplementation(libs.androidx.compose.ui.testManifest)
 
     testImplementation(libs.junit)
-    testImplementation(libs.robolectric)
-    testImplementation(libs.bundles.roborazzi)
     testImplementation(libs.composable.preview.scanner)
+    testImplementation(libs.google.testparameterinjector)
 }
